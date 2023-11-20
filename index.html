@@ -10,15 +10,12 @@
 </head>
 <body>
   <header class="header" id="header">
-    <nav class="nav container">
-        <a href="#" class="nav__logo">
-          <span class="nav__logo-circle">S</span>
-          <span class="nav__logo-name">Saiful Islam</span>
-        </a>
-
-        <div class="nav__menu" id="nav-menu">
-          <span class="nav__title">Menu</span>
-          <h3 class="nav__name">Saiful</h3>
+    <a href="#" class="nav__logo">
+      <span class="nav__logo-circle">S</span>
+      <span class="nav__logo-name">Saiful Islam</span>
+    </a>
+    <nav class="nav container">       
+      <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
                 <li class="nav__item">
                     <a href="#home" class="nav__link active-link">Home</a>
@@ -30,7 +27,7 @@
                     <a href="#projects" class="nav__link">Projects</a>
                 </li>
                 <li class="nav__item">
-                    <a href="#contact" class="nav__link">Contact Me</a>
+                    <a href="#contact" class="nav__link nav__link-button">Contact Me</a>
                 </li>
             </ul>
 
@@ -46,9 +43,12 @@
             <div class="nav__shop" id="cart-shop">
                 <i class='bx bx-shopping-bag' ></i>
             </div>
-
-            <div class="nav__toggle" id="nav-toggle">
-              <i class="ri-menu-5-line"></i>
+            <div class="nav__buttons">
+              <!-- theme button  -->
+              <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+              <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-5-line"></i>
+              </div>
             </div>
         </div>
     </nav>
@@ -57,9 +57,7 @@
 <main class="main">
   <section class="home section" id="home">
     <div class="home__container container grid">
-      <h1 class="home__name">
-        Saiful Islam
-      </h1>
+      
       <div class="home__perfil">
         <div class="home__image">
           <img src="img/profile.jpg" alt="image" class="home__img">
@@ -83,16 +81,17 @@
         </div>
       </div>
       <div class="home__info">
+        <h1 class="home__name">
+          Saiful Islam
+        </h1>
         <p class="home__description">
-          <b>MERN Developer</b>, fourth-year Student at Sonargaon University looking for an Intersnhip in MERN Stack Development | NodeJS Developer | Back-end Developer | JS Developer | Problem Solver
+          <b>NodeJS Developer</b>, fourth-year Student at Sonargaon University looking for an Intersnhip in MERN Stack Development | NodeJS Developer | Back-end Developer | JS Developer | Problem Solver
         </p>
-
+        <!-- ====the down arrow==== -->
         <a href="#about" class="home__scroll">
           <div class="home__scroll-box">
             <i class="ri-arrow-down-s-line"></i>
           </div>
-
-          <span class="home__scroll-text">Scroll Down</span>
         </a>
       </div>
     </div>
@@ -100,13 +99,14 @@
 
   <!-- ======ABOUT====== -->
   <section class="about section" id="about">
-    <div class="abut__container container grid">
+    <div class="about__container container grid">
       <h2 class="section__title-1">
         About Me
       </h2>
 
       <!-- IF YOU DONT TO PUT YOUR PHOTO YOU CAN REMOVE THE DIV BELOW -->
       <div class="about__perfil">
+        <!-- =====JODI IMAGE R BAKI DESIGN SORAYA DITE CHAO about__image DIV TA KAITA DILEI HOIBO==== -->
         <div class="about__image">
           <img src="img/about.jpg" alt="image" class="about__img">
 
@@ -143,7 +143,8 @@
     <h2 class="section__title-1">
       <span>Projects</span>
     </h2>
-    <div class="projects__container container grid">
+    <div id="all__content">
+      <div class="projects__container container grid">
       
       <!--=========COPY THIS ARTICLE SECTION TO ADD MORE PROJECTS=====-->
       <article class="projects__card">
@@ -185,6 +186,7 @@
         </div>
       </article>
     </div>
+  </div>
   </section>
   <section class="contact section" id="contact">
     <div class="contact__container grid">
@@ -220,6 +222,7 @@
             <textarea name="user__message" id="message" class="contact__input" required placeholder="message"></textarea>
            <label for="message" class="contact__label">Message</label>
           </div>
+          <p class="contact__message" id="contact-message"></p>
           <button type="submit" class="contact__button button">
             <i class="ri-send-plane-2-line"></i>Send Message
           </button>
@@ -246,7 +249,34 @@
     </div>
   </section>
 </main>
+<!-- ======footer====== -->
+<footer class="footer">
+  <div class="footer__container container grid">
+    <ul class="footer__links">
+      <li>
+        <a href="#about" class="footer__link">About</a>
+      </li>
 
-  <script src="main.js"></script>
+      <li>
+        <a href="#projects" class="footer__link">Projects</a>
+      </li>
+    </ul>
+
+    <span class="footer__copy">
+      &#169; All Rights Reserved By
+      <a href="">Saiful Islam</a>
+    </span>
+  </div>
+</footer>
+   <!-- =====SCROLL UP====== -->
+   <a href="#" class="scrollup" id="scroll-up">
+    <i class="ri-arrow-up-s-line"></i>
+   </a>
+
+<!-- email js  -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<!-- main js -->
+   <script src="main.js"></script>
 </body>
 </html>
