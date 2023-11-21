@@ -491,7 +491,7 @@ body.dark-theme{
 .about__perfil{
   position: relative;
   justify-self: center;
-  margin-block: 2.5rem 4.5rem;  
+  margin-block: 2.5rem 4.5rem; 
 }
 .about__image{
   width: 220px;
@@ -548,9 +548,20 @@ body.dark-theme{
   top: .5rem;
 }
 .about__list{
+  text-align: center;
   list-style: square;
   color: var(--title-color);
   margin-bottom: 3rem;
+  width: max-content;
+}
+#skill_head{
+  font-size: 1.25rem;
+  margin-right: 20%;
+}
+.skills{
+  display: flex;
+  column-gap: 3rem;
+  /* margin-left: 25%; */
 }
 .about__buttons{
   display: flex;
@@ -818,6 +829,14 @@ body.dark-theme{
   color: var(--white-color);
   font-weight: var(--font-medium);
 }
+.designer{
+  color: #595959;
+  margin-left: 42%;
+  font-size: .8rem;
+}
+.fady{
+  color: white;
+}
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar{
   width: .6rem;
@@ -879,9 +898,41 @@ body.dark-theme{
     transform: translateX(0);
   }
 }
+@media screen and (max-width: 970px){
+  .designer{
+    margin-left: 41%;
+  }
+}
+@media screen and (max-width: 832px){
+  .designer{
+    margin-left: 40%;
+  }
+}
+@media screen and (max-width: 600px){
+  .designer{
+    margin-left: 40%;
+  }
+}
+@media screen and (max-width: 579px){
+  .designer{
+    margin-left: 35%;
+  }
+}
+@media screen and (max-width: 380px){
+  .designer{
+    margin-left: 20%;
+  }
+}
 @media screen and (min-width: 340px){
   .projects__button{
     width: max-content;
+  }
+}
+@media screen and (max-width: 500px){
+  .skills{
+    display: block;
+    margin-left: 100%;
+    /* flex-direction: row; */
   }
 }
 /* For medium devices */
@@ -898,6 +949,11 @@ body.dark-theme{
    width: 350px;
    padding: 4rem 1.5rem;
  }
+}
+@media screen and (max-width: 320px){
+  .about__shadow{
+    height: 15rem;
+  }
 }
 /* For large devices */
 @media screen and (min-width: 1150px){
