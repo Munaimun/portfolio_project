@@ -538,6 +538,7 @@ body.dark-theme{
 }
 .about__item{
   font-size: 1.2rem;
+  width: max-content;
 }
 .about__description::after{
   content: '';
